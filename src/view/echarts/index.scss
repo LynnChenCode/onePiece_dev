@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family:YouSheBiaoTiHei ;
+  src: url("../assets/fonts/YouSheBiaoTiHei.ttf");
+}
+
+@font-face {
+  font-family: Shizishijian;
+  src: url("../assets/fonts/DS-DIGIT.TTF");
+}
+body {
+  min-width: 1024px;
+  max-width: 1920px;
+  background: url("./images/bg.png") no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: .475rem;
+
+  .header-left,
+  .header-right {
+    position: relative;
+    width: 7.0875rem;
+    height: 100%;
+    background: url("./images/dataScreen-header-left-bg.png") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .header-center {
+    position: relative;
+    flex: 1;
+    height: 100%;
+
+    .header-center-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1.025rem;
+      font-family: YouSheBiaoTiHei;
+      font-size: .4rem;
+      line-height: .975rem;
+      color: #05e8fe;
+      text-align: center;
+      letter-spacing: 4px;
+      background: url("./images/dataScreen-header-center-bg.png") no-repeat;
+      background-size: 100% 100%;
+
+      .header-center-warning {
+        position: absolute;
+        bottom: -0.525rem;
+        left: 50%;
+        width: 7.775rem;
+        height: .55rem;
+        font-family: YouSheBiaoTiHei;
+        font-size: .175rem;
+        line-height: .55rem;
+        color: #ffffff;
+        text-align: center;
+        letter-spacing: .0125rem;
+        background: url("./images/dataScreen-header-warn-bg.png") no-repeat;
+        background-size: 100% 100%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  $screen-url:url("./images/dataScreen-header-btn-bg-l.png") no-repeat;
+  $down-url:url("./images/dataScreen-header-btn-bg-r.png") no-repeat;
+  @mixin header-all{
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    box-sizing: border-box;
+    width: 1.7rem;
+    height: .525rem;
+    padding-right: .05rem;
+    font-family: YouSheBiaoTiHei;
+    font-size: .225rem;
+    font-weight: 400;
+    line-height: .525rem;
+    color: #29fcff;
+    text-align: center;
+    cursor: pointer;
+  }
+  .header-screening {
+   @include header-all();
+   right: 0;
+   background:$screen-url;
+   background-size: 100% 100%;
+  }
+
+  .header-download {
+   @include header-all();
+   left: 0;
+   background: $down-url;
+   background-size: 100% 100%;
+  }
+
+  .header-time {
+    position: absolute;
+    top: 0;
+    right: .175rem;
+    width: 3.875rem;
+    font-family: YouSheBiaoTiHei;
+    font-size: .2125rem;
+    font-weight: 400;
+    line-height: .475rem;
+    color: #05e8fe;
+    white-space: nowrap;
+  }
+}
+
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  max-width: 1920px;
+  height: 300px;
+  margin: 0 auto;
+  padding: .125rem .125rem 0;
+
+  .column {
+    flex: 3;
+    position: relative;
+    .dataScreen-map-title {
+      position: absolute;
+      top: 2.5rem;
+      left: .6rem;
+      z-index: 99;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      width: 2.5rem;
+      height: .3125rem;
+      padding-left: .375rem;
+      font-size: .175rem;
+      color: #ffffff;
+      letter-spacing: .0625rem;
+      background: url("./images/map-title-bg.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    &:nth-child(2) {
+      flex: 5;
+      @mixin panel-center-head{
+        h2{
+          font-size: .3rem;
+          color: #41e4f1;
+        }
+        span{
+          font-family: Shizishijian;
+          font-size: .75rem;
+          color: rgb(208, 208, 83);
+        }
+      }
+      .panel-center {
+        position: relative;
+        height: 1.2rem;
+        padding: .125rem;
+        border: 1px solid rgba(25, 186, 139, 0.17);
+        margin: 1rem .625rem 0;
+        background: url("./images/line\(1\).png") #185c9717;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: "";
+          width: 20px;
+          height: 20px;
+          border-top: 5px solid #41e4f1;
+          border-left: 5px solid #41e4f1;
+        }
+    
+        &::after {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          content: "";
+          width: 20px;
+          height: 20px;
+          border-bottom: 5px solid #41e4f1;
+          border-right: 5px solid #41e4f1;
+        }
+        .le{
+          flex: 1;
+          border-right: 2px solid #41e4f1;
+          @include panel-center-head()
+        }
+        .ri{
+          flex: 1;
+          @include panel-center-head()
+        }
+        
+      }
+    }
+  }
+
+  .panel {
+    position: relative;
+    height: 5rem;
+    padding: 0 .1875rem .5rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    margin-top: .25rem;
+    background: url("./images/line\(1\).png") #185c9717;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #41e4f1;
+      border-left: 2px solid #41e4f1;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #41e4f1;
+      border-right: 2px solid #41e4f1;
+    }
+
+    .panel-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid #41e4f1;
+        border-left: 2px solid #41e4f1;
+      }
+      
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid #41e4f1;
+        border-right: 2px solid #41e4f1;
+      }
+    }
+  }
+ 
+}
