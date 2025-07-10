@@ -15,20 +15,20 @@
 ## 🛠️ 技术栈
 
 **核心框架**  
-![Vue.js](https://img.shields.io/badge/Vue.js-3.4.21-4FC08D?logo=vuedotjs)
+![Vue.js](https://img.shields.io/badge/Vue.js-3.2.47-4FC08D?logo=vuedotjs)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-3178C6?logo=typescript)
 
 **状态管理**  
-![Pinia](https://img.shields.io/badge/Pinia-2.1.7-FFD02F?logo=vue.js)
+![Pinia](https://img.shields.io/badge/Pinia-2.0.0-rc.10?logo=vue.js)
 
 **数据可视化**  
-![ECharts](https://img.shields.io/badge/ECharts-5.4.3-AA344D?logo=apacheecharts)
+![ECharts](https://img.shields.io/badge/ECharts-5.4.2-AA344D?logo=apacheecharts)
 
 **UI & 样式**  
-![Sass](https://img.shields.io/badge/Sass-1.71.0-CC6699?logo=sass)
+![Sass](https://img.shields.io/badge/Sass-1.63.6-CC6699?logo=sass)
 
 **构建工具**  
-![Vite](https://img.shields.io/badge/Vite-5.1.0-646CFF?logo=vite)
+![Vite](https://img.shields.io/badge/Vite-4.3.9-646CFF?logo=vite)
 
 ## 🎯 功能模块
 
