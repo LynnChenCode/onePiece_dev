@@ -19,7 +19,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-3178C6?logo=typescript)
 
 **状态管理**  
-![Pinia](https://img.shields.io/badge/Pinia-2.0.0-rc.10?logo=vue.js)
+![Pinia](https://img.shields.io/badge/Pinia-2.0.0-FFD02F?logo=vue.js)
 
 **数据可视化**  
 ![ECharts](https://img.shields.io/badge/ECharts-5.4.2-AA344D?logo=apacheecharts)
