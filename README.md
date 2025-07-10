@@ -112,6 +112,7 @@ src/
 ### 音乐服务 API
 ```typescript
 使用的是https://wanghun.top网站的公共api，有兴趣的朋友可以去了解下
+APlayer组件
 ```
 
 ### ECharts 集成说明
