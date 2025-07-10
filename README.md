@@ -11,7 +11,6 @@
 - **数据可视化**：集成 ECharts 实现专业级图表展示
 - **多媒体功能**：支持网易云音乐/QQ音乐免费歌曲播放
 - **交互体验**：动态看板娘提升用户交互体验
-- **响应式设计**：完美适配各种屏幕尺寸
 
 ## 🛠️ 技术栈
 
@@ -61,9 +60,6 @@
 
 ### ⚙️ 其他特色功能
 - 404 创意页面
-- 深色/浅色主题切换
-- 响应式布局适配
-- 访问权限控制
 
 ![404](https://github.com/user-attachments/assets/0716c2bc-db66-48e1-b75a-4bb76fbb3aeb)
 
@@ -116,49 +112,12 @@ src/
 
 ### 音乐服务 API
 ```typescript
-// 示例：音乐搜索功能
-import { useMusicStore } from '@/stores/music';
-
-const searchSongs = async (keyword: string, platform: 'netease' | 'qq') => {
-  const musicStore = useMusicStore();
-  try {
-    const results = await musicStore.searchSongs(keyword, platform);
-    return results;
-  } catch (error) {
-    console.error('搜索失败:', error);
-    return [];
-  }
-};
+使用的是https://wanghun.top网站的公共api，有兴趣的朋友可以去了解下
 ```
 
-### ECharts 集成示例
+### ECharts 集成说明
 ```vue
-<script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import * as echarts from 'echarts';
-
-const chartRef = ref<HTMLElement>();
-
-onMounted(() => {
-  const chart = echarts.init(chartRef.value!);
-  
-  chart.setOption({
-    title: { text: '销售数据统计' },
-    tooltip: {},
-    xAxis: { data: ['Q1', 'Q2', 'Q3', 'Q4'] },
-    yAxis: {},
-    series: [{
-      name: '销售额',
-      type: 'bar',
-      data: [125, 200, 150, 280]
-    }]
-  });
-});
-</script>
-
-<template>
-  <div ref="chartRef" class="w-full h-96"></div>
-</template>
+使用了echarts和vue3-seamless-scroll组件，还有部分是展示图用的CSS动画加我用PS做的样式图片
 ```
 
 ## 🤝 贡献指南
