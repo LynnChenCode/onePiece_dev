@@ -25,7 +25,6 @@
 ![ECharts](https://img.shields.io/badge/ECharts-5.4.3-AA344D?logo=apacheecharts)
 
 **UI & 样式**  
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-06B6D4?logo=tailwindcss)
 ![Sass](https://img.shields.io/badge/Sass-1.71.0-CC6699?logo=sass)
 
 **构建工具**  
