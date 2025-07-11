@@ -100,7 +100,7 @@ src/
 ├── utils/           # 工具函数
 ├── views/           # 页面视图
 │   ├── echarts      # 数据可视化
-│   ├── file         # 文件链接页面
+│   ├── file         # 首页
 │   ├── musicpage    # 音乐页面
 |   ├── pagenotfound.vue   # 404页面
 │   └── ...          
