@@ -92,17 +92,17 @@ npm run build
 src/
 ├── assets/          # 静态资源
 ├── components/      # 通用组件
-├── composables/     # 组合式函数
+├── hooks/           # 组合式函数
 ├── layouts/         # 页面布局
 ├── router/          # 路由配置
 ├── stores/          # Pinia 状态管理
 ├── styles/          # 全局样式
-├── types/           # TypeScript 类型定义
 ├── utils/           # 工具函数
 ├── views/           # 页面视图
-│   ├── Home.vue     # 首页
-│   ├── Music.vue    # 音乐页面
-│   ├── Charts.vue   # 数据可视化
+│   ├── echarts      # 数据可视化
+│   ├── file         # 文件链接页面
+│   ├── musicpage    # 音乐页面
+|   ├── pagenotfound.vue   # 404页面
 │   └── ...          
 └── main.ts          # 应用入口
 ```
